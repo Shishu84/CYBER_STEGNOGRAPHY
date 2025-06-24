@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Steganography Web App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+      border-radius: 10px;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #34495e;
+    }
+
+    input[type="file"], textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2980b9;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #2c3e50;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Steganography Encoder & Decoder
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>🔐 Encode Message into Image</h2>
+      <form id="encodeForm" enctype="multipart/form-data">
+        <label>Select Image:</label>
+        <input type="file" name="image" accept="image/*" required />
+        <label>Enter Message:</label>
+        <textarea name="message" rows="4" required></textarea>
+        <button type="submit">Encode</button>
+      </form>
+    </div>
+
+    <div class="section">
+      <h2>🧠 Decode Message from Image</h2>
+      <form id="decodeForm" enctype="multipart/form-data">
+        <label>Select Encoded Image:</label>
+        <input type="file" name="encodedImage" accept="image/*" required />
+        <button type="submit">Decode</button>
+      </form>
+      <p id="decodedMessage" style="margin-top: 1rem; font-weight: bold;"></p>
+    </div>
+
+    <div class="section">
+      <h2>🎯 How it Works (Demo)</h2>
+      <p>This web app hides your secret message inside an image using LSB steganography technique.</p>
+      <ul>
+        <li>Choose an image and type your secret message</li>
+        <li>Click “Encode” – the message is hidden into the image</li>
+        <li>To decode, upload that image and click “Decode”</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Steganography Project | Created by Shishu Kumar 
+  </footer>
+
+  <script>
+    // Placeholder JS to integrate with backend later
+    document.getElementById("encodeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Encoding function will connect to backend soon.");
+    });
+
+    document.getElementById("decodeForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Decoding function will connect to backend soon.");
+    });
+  </script>
+</body>
+</html>

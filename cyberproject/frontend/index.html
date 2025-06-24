@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SteganoVision</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .section {
+      padding: 40px 60px;
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .demo-gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>SteganoVision</h1>
+    <nav>
+      <a href="#encode">Encode</a>
+      <a href="#decode">Decode</a>
+      <a href="#demo">Demo</a>
+    </nav>
+  </header>
+
+  <div class="section" id="encode">
+    <h2>🔒 Encode a Message</h2>
+    <div class="box">
+      <form>
+        <label>Upload Image:</label>
+        <input type="file" accept="image/*" />
+
+        <label>Enter Secret Message:</label>
+        <textarea rows="4" placeholder="Type your secret message here..."></textarea>
+
+        <button type="submit">Encode</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="section" id="decode">
+    <h2>🔓 Decode a Message</h2>
+    <div class="box">
+      <form>
+        <label>Upload Stego Image:</label>
+        <input type="file" accept="image/*" />
+
+        <button type="submit">Decode</button>
+        <p><strong>Decoded Message:</strong> <em>(Output will appear here)</em></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="section" id="demo">
+    <h2>🧪 Demo Work</h2>
+    <div class="box demo-gallery">
+      <div class="row">
+        <img src="input.png" alt="Demo Image 1" />
+        <img src="input2.png" alt="Demo Image 2" />
+        <img src="input3.png" alt="Demo Image 3" />
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 SteganoVision | Built by Shishu Kumar </p>
+  </footer>
+
+</body>
+</html>
